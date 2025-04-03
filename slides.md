@@ -19,6 +19,7 @@ mdc: true
 colorSchema: dark
 fonts:
   sans: Comic Neue
+favicon: 'https://cdn.francetravail.fr/studio/logos/marque/favicon/favicon.svg'
 ---
 
 # Vue 3 my beloved
