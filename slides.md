@@ -534,8 +534,59 @@ defineEmits(['response'])
 ```
 
 ---
+
+# Typescript
+
+Soigne les maladies, retour de l'être aimé...
+
+````md magic-move {lines: true}
+```vue
+<!-- Il suffit d'ajouter lang="ts" -->
+<script setup lang="ts">
+const a = ref('0')
+a.value++ // Error : An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+</script>
+
+<template>
+  replace with ref(0)
+</template>
+```
+
+```vue
+<!-- Permet de typer nos composants -->
+<script setup lang="ts">
+defineProps<{
+  color: string
+}>()
+
+defineEmits<{
+  response: [msg: string]
+}>()
+</script>
+
+<template>
+  <button :color @click="$emits('response', 'clicked!')">
+    <slot />
+  </button>
+</template>
+```
+````
+
+---
 layout: cover
 background: https://banner2.cleanpng.com/20231213/eya/transparent-birthday-celebration-colorful-birthday-celebration-with-confetti-and-1710976214004.webp
 ---
 
 # Bravo vous être maintenant un expert Vue 3
+
+---
+layout: quote
+---
+
+# enfin presque voici mes prochaines conférences :
+
+pour seulement ~~89.99€~~ -> 39.99€
+
+- Présentation d'un projet from scratch avec toutes les lib chaudes du moment
+- Voyage au cœur des composants Vue
+- Comment j'ai fait ces slides et je suis devenu millionnaire
